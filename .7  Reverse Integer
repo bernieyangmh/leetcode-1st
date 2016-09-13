@@ -1,0 +1,5 @@
+        a = str(x)[::-1]
+        if x >= 0:
+            return int(a)
+        else:
+            return -int(a)
