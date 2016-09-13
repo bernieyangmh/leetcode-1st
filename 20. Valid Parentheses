@@ -1,0 +1,10 @@
+        stack = [None]
+        smap = {')': '(', '}': '{', ']': '['}
+        for bracket in s:
+            if bracket in smap and smap[bracket] == stack[len(stack)-1]:
+                stack.pop()
+            else:
+                stack.append(bracket)
+        return len(stack) == True
+        
+        #add one bracket Sequentially,match then pop(),until end, like stack.
