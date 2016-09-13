@@ -1,0 +1,15 @@
+        new_head = ListNode(0)
+        new_head.next = head
+        fast = slow = new_head
+        for i in range(n+1):
+            fast = fast.next
+        while fast:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
+        return new_head.next
+        
+        
+        
+        #Two Pointer,one faster,one slower.gap is N+1,when faster pointer point NULL （linked list tail),slow point n-1,then remove n,slower 
+        pointer point n+1,mean next.next.
