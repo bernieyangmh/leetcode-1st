@@ -7,3 +7,6 @@
                     return res
             res += strs[0][i]
         return res
+
+
+#The range between common prefix string, so [0] is fine.
