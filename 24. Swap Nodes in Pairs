@@ -1,0 +1,13 @@
+class Solution(object):
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        a = ListNode(0)
+        if not head or not head.next:
+            return head
+        a = head.next
+        head.next = self.swapPairs(head.next.next)
+        a.next = head
+        return a
