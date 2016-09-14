@@ -1,0 +1,10 @@
+        length, i = len(nums), 0 
+        while i < length:
+            if nums[i] == val:
+                nums[i] = nums[length - 1]
+                length -= 1
+            else:
+                i += 1
+        return length
+        
+        ##Notice that "It doesn't matter what you leave beyond the new length.". It's meaning that you can use them.
