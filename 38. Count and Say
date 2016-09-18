@@ -1,0 +1,14 @@
+        res = '1'
+        for i in xrange(n-1):
+            new_res, pre, count = '', res[0], 0
+            for j in xrange(len(res)):
+                if res[j] == pre:
+                    count += 1
+                else:
+                    new_res += str(count) + pre
+                    count = 1
+                    pre = res[j]
+            res = new_res + str(count) + pre
+        return res
+                
+          Still have some confuse....
